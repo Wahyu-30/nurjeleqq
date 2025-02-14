@@ -1,0 +1,82 @@
+body {
+    background: #ffe6e6;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+/* Judul Ucapan */
+h1 {
+    color: #ff3366;
+    font-size: 50px;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animasi Bunga */
+.flower {
+    font-size: 30px;
+    color: #ff3366;
+    animation: flowerAnimation 3s infinite;
+}
+
+/* Animasi Love */
+.love {
+    font-size: 25px;
+    color: red;
+    position: absolute;
+    animation: loveAnimation 3s infinite;
+}
+
+/* Animasi Love */
+@keyframes loveAnimation {
+    0% {
+        top: 70%;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        top: 40%;
+        transform: scale(1.5);
+    }
+    100% {
+        top: 10%;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/* Animasi Bunga */
+@keyframes flowerAnimation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+/* Bunga di bawah tulisan */
+.bunga {
+    font-size: 50px;
+    position: absolute;
+    top: 80%; /* Bunga akan ditempatkan lebih rendah */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flowerAnimation 3s infinite;
+}
